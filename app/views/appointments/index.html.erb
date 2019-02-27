@@ -1,0 +1,11 @@
+<h1>List of Doctors Patients</h1>
+<% @appointments.each do |app| %>
+  <div><h3>Doctor - <%= app.doctor.full_name %></h3></div>
+  <div><h3>Patient - <%= app.patient.full_name %></h3></div>
+  <div><h3>Disease - <%= app.patient.issue %></h3></div>
+  <div><h3>Date - <%= app.date %></h3></div>
+  <%= link_to "Delete Appointment", doctor_appointment_path(@doctor, app), method: :delete %>
+  <% end %>
+
+
+

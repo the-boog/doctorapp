@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+  
     <title>Doctorapp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,6 +11,30 @@
   </head>
 
   <body>
+  <header>
+
+  <div class="ui container">
+  <%= render "layouts/navbar" %>
+  <%= image_tag("caduceussmall.png", :alt => "cadeceus", class: "coolimage") %>
+
+  </div>
+
+  </header>
+
+  <div class="ui container">
+  
+
+  
+  
+  
+  
     <%= yield %>
+    </div>
+<footer>
+   
+    
+</footer>
+ 
   </body>
 </html>
+

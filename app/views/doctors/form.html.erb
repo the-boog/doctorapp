@@ -1,0 +1,16 @@
+<h1><%= @doctor.full_name ? 'Edit Doctor' : 'New Doctor' %>
+
+<%= form_with(model: @doctor, local: true, class: "ui form") do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+
+  <%= f.label :specialty %>
+  <%= f.text_field :specialty %>
+  <%= f.submit %>
+
+  <% end %>
+
+

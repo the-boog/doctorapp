@@ -1,0 +1,14 @@
+<h1><%= @appointment.date ? 'Edit Appointment' : 'New Appointment' %>
+
+<%= form_with(model: [@doctor, @appointment], local: true, class: "ui form") do |f| %>
+  <%= f.label :date %>
+  <%= f.text_field :date %>
+
+
+  <%= f.label :patient_id %>
+  <%= f.select :patient_id, @patients_all.collect{ |x| [x.full_name, x.id]} %>
+  <%= f.submit %>
+
+  <% end %>
+
+
